@@ -5,8 +5,12 @@ import { PRODUCTS, AVAILABILITY, getStatus } from '../data/products.js'
 import { useCart } from '../context/CartContext.jsx'
 import { fcfa } from '../config.js'
 
-export default function Product() {
+export default function ProductPage() {
   const { id } = useParams()
+  return <Product key={id} id={id} />
+}
+
+function Product({ id }) {
   const product = PRODUCTS.find((p) => p.id === id)
   const { add } = useCart()
   const navigate = useNavigate()

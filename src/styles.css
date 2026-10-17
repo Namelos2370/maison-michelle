@@ -15,7 +15,8 @@
   --sans: 'Jost', system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
+main { min-height: 70vh; }
 body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; }
 a { color: inherit; }
