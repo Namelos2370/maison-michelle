@@ -18,7 +18,7 @@ const PAGES = {
       ['Données collectées', 'Nom, prénom, téléphone, ville, quartier, adresse ou point de repère, contenu de la commande et mode de paiement choisi, uniquement pour traiter et livrer votre commande.'],
       ['Utilisation', 'Vos données servent à vous contacter, confirmer, préparer et livrer votre commande. Elles ne sont pas vendues à des tiers.'],
       ['Conservation', 'Les données sont conservées le temps nécessaire au traitement de la commande et aux obligations légales applicables au Cameroun.'],
-      ['Vos droits', `Vous pouvez demander l’accès, la rectification ou la suppression de vos données en écrivant à ${SHOP.email}.`],
+      ['Vos droits', `Vous pouvez demander l’accès, la rectification ou la suppression de vos données en nous contactant ${SHOP.email ? 'à ' + SHOP.email : 'sur WhatsApp au ' + SHOP.whatsappDisplay}.`],
     ],
   },
   retours: {

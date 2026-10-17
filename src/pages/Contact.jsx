@@ -18,13 +18,17 @@ export default function Contact() {
       <div className="contact-grid">
         <div>
           <p><b>WhatsApp</b><br /><a href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">{SHOP.whatsappDisplay}</a></p>
-          <p><b>E-mail</b><br /><a href={`mailto:${SHOP.email}`}>{SHOP.email}</a></p>
+          {SHOP.email && <p><b>E-mail</b><br /><a href={`mailto:${SHOP.email}`}>{SHOP.email}</a></p>}
           <p><b>Basée à</b><br />{SHOP.city}</p>
-          <p><b>Réseaux sociaux</b><br />
-            <a href={SHOP.instagram} target="_blank" rel="noreferrer">Instagram</a> ·{' '}
-            <a href={SHOP.facebook} target="_blank" rel="noreferrer">Facebook</a> ·{' '}
-            <a href={SHOP.tiktok} target="_blank" rel="noreferrer">TikTok</a>
-          </p>
+          {(SHOP.instagram || SHOP.facebook || SHOP.tiktok) && (
+            <p><b>Réseaux sociaux</b><br />
+              {[['Instagram', SHOP.instagram], ['Facebook', SHOP.facebook], ['TikTok', SHOP.tiktok]]
+                .filter(([, u]) => u)
+                .map(([n, u], i) => (
+                  <span key={n}>{i > 0 && ' · '}<a href={u} target="_blank" rel="noreferrer">{n}</a></span>
+                ))}
+            </p>
+          )}
         </div>
         <form className="form" onSubmit={send}>
           <div className="field"><label>Nom</label><input required value={f.name} onChange={set('name')} /></div>

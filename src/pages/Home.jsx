@@ -4,21 +4,24 @@ import { PRODUCTS, CATEGORIES } from '../data/products.js'
 import { SHOP } from '../config.js'
 
 export default function Home() {
-  const featured = PRODUCTS.filter((p) => p.featured)
-  const latest = PRODUCTS.slice(-4)
+  const featured = PRODUCTS.filter((p) => p.featured).slice(0, 4)
+  const latest = PRODUCTS.slice(-4).reverse()
   return (
     <>
       <section className="hero">
-        <div className="container hero-in">
-          <p className="eyebrow">Mode artisanale · Faite main à Yaoundé</p>
-          <h1>Le crochet,<br />version élégante.</h1>
-          <p className="lead">
-            Vêtements, sacs et accessoires tissés point après point, avec passion. Chaque pièce est unique.
-          </p>
-          <div className="hero-cta">
-            <Link to="/boutique" className="btn">Découvrir la boutique</Link>
-            <a className="btn ghost" href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">Écrire sur WhatsApp</a>
+        <div className="container hero-grid">
+          <div className="hero-in">
+            <p className="eyebrow">Mode artisanale · Faite main à Yaoundé</p>
+            <h1>Le crochet,<br />version élégante.</h1>
+            <p className="lead">
+              Vêtements, sacs et accessoires tissés point après point, avec passion. Chaque pièce est unique.
+            </p>
+            <div className="hero-cta">
+              <Link to="/boutique" className="btn">Découvrir la boutique</Link>
+              <a className="btn ghost" href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">Écrire sur WhatsApp</a>
+            </div>
           </div>
+          <img className="hero-logo" src="/logo.jpg" alt="Maison Michelle — Vêtements, sacs, accessoires" />
         </div>
       </section>
 

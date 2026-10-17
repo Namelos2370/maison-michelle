@@ -10,8 +10,9 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-in">
-        <Link to="/" className="logo" onClick={close}>
-          Maison <span>Michelle</span>
+        <Link to="/" className="logo" onClick={close} aria-label="Maison Michelle — accueil">
+          <img src="/logo-mark.jpg" alt="" />
+          <span className="logo-text">Maison <em>Michelle</em></span>
         </Link>
         <nav className={'nav' + (open ? ' open' : '')}>
           <NavLink to="/boutique" onClick={close}>Boutique</NavLink>

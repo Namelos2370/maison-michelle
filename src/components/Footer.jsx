@@ -6,8 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <div className="logo">Maison <span>Michelle</span></div>
-          <p className="muted">{SHOP.tagline}</p>
+          <img className="footer-logo" src="/logo.jpg" alt="Maison Michelle" />
           <p className="muted">{SHOP.city}</p>
         </div>
         <div>
@@ -23,11 +22,11 @@ export default function Footer() {
           <Link to="/legal/retours">Retours & remboursement</Link>
         </div>
         <div>
-          <h4>Nous suivre</h4>
-          <a href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp</a>
-          <a href={SHOP.instagram} target="_blank" rel="noreferrer">Instagram</a>
-          <a href={SHOP.facebook} target="_blank" rel="noreferrer">Facebook</a>
-          <a href={SHOP.tiktok} target="_blank" rel="noreferrer">TikTok</a>
+          <h4>Nous contacter</h4>
+          <a href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp {SHOP.whatsappDisplay}</a>
+          {SHOP.instagram && <a href={SHOP.instagram} target="_blank" rel="noreferrer">Instagram</a>}
+          {SHOP.facebook && <a href={SHOP.facebook} target="_blank" rel="noreferrer">Facebook</a>}
+          {SHOP.tiktok && <a href={SHOP.tiktok} target="_blank" rel="noreferrer">TikTok</a>}
         </div>
       </div>
       <div className="container copy">© {new Date().getFullYear()} Maison Michelle — Tous droits réservés.</div>

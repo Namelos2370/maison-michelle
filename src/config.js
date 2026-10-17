@@ -3,12 +3,13 @@ export const SHOP = {
   name: 'Maison Michelle',
   tagline: 'Des créations uniques, faites avec passion.',
   // Numéro WhatsApp au format international, sans + ni espaces (ex: 237670000000)
-  whatsapp: '237600000000',
-  whatsappDisplay: '+237 6 00 00 00 00',
-  email: 'contact@maisonmichelle.com',
-  instagram: 'https://instagram.com/maisonmichelle',
-  facebook: 'https://facebook.com/maisonmichelle',
-  tiktok: 'https://tiktok.com/@maisonmichelle',
+  whatsapp: '237679203958',
+  whatsappDisplay: '+237 6 79 20 39 58',
+  // Laisser vide tant que les comptes officiels ne sont pas créés (les liens sont alors masqués)
+  email: '',
+  instagram: '',
+  facebook: '',
+  tiktok: '',
   city: 'Yaoundé, Cameroun',
   // URL optionnelle (Formspree, Make, Zapier, Supabase edge function...) qui reçoit chaque commande en JSON
   orderEndpoint: import.meta.env.VITE_ORDER_ENDPOINT || '',
